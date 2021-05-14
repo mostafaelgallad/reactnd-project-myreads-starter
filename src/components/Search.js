@@ -12,11 +12,12 @@ class Search extends Component {
     //get the query from the input and send it to the Api then set book state with the result
     const SearchHandle = async (e) => {
       let query = e.target.value;
-      let result = await search(query);
-      this.setState({
-        books: result,
-      });
-      console.log(result);
+      if (query.trim()) {
+        let result = await search(query);
+        this.setState({
+          books: result,
+        });
+      }
     };
     return (
       <div className="search-books">
