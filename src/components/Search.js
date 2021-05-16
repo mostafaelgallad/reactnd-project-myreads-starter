@@ -68,14 +68,12 @@ class Search extends Component {
             this.state.books !== undefined &&
             //check for the count inside book state
             this.state.books.length > 0 ? (
-              this.state.books.map(
-                (book) => (
-                  <li key={book.id}>
-                    <Book shelfChange={this.props.shelfChange} book={book} />
-                  </li>
-                )
-                //render all the books
-              )
+              //render all the books
+              this.state.books.map((book) => (
+                <li key={book.id}>
+                  <Book shelfChange={this.props.shelfChange} book={book} />
+                </li>
+              ))
             ) : (
               <div>Use Search terms to get a result</div>
             )}
