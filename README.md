@@ -18,7 +18,7 @@ How it works?
 
 - Clone the repo
 - Move to the project folder
-- cd <project directory>
+- cd project directory
 - git clone <repo>
 - Install npm
 - npm install
